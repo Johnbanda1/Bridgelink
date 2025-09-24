@@ -6,6 +6,8 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import Strategy from './components/Strategy';
 import Governance from './components/Governance';
+import Gallery from './components/Gallery';
+import Statistics from './components/Statistics';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -27,6 +29,8 @@ function App() {
         <About language={language} />
         <Services language={language} />
         <Projects language={language} />
+        <Statistics language={language} />
+        <Gallery language={language} />
         <Strategy language={language} />
         <Governance language={language} />
         <Contact language={language} />

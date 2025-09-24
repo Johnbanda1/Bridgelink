@@ -20,6 +20,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           { name: 'About Us', href: '#about' },
           { name: 'Services', href: '#services' },
           { name: 'Projects', href: '#projects' },
+          { name: 'Gallery', href: '#gallery' },
           { name: 'Strategy', href: '#strategy' },
           { name: 'Governance', href: '#governance' },
           { name: 'Contact', href: '#contact' }
@@ -62,6 +63,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           { name: 'À Propos', href: '#about' },
           { name: 'Services', href: '#services' },
           { name: 'Projets', href: '#projects' },
+          { name: 'Galerie', href: '#gallery' },
           { name: 'Stratégie', href: '#strategy' },
           { name: 'Gouvernance', href: '#governance' },
           { name: 'Contact', href: '#contact' }

@@ -143,6 +143,72 @@ const About: React.FC<AboutProps> = ({ language }) => {
               ))}
             </div>
           </motion.div>
+          
+          {/* Visual Gallery */}
+          <motion.div 
+            variants={itemVariants}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"
+          >
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              className="relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Mining operations"
+                className="w-full h-32 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-2 left-2 text-white text-sm font-semibold">
+                {language === 'en' ? 'Operations' : 'Opérations'}
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: -2 }}
+              className="relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Mining equipment"
+                className="w-full h-32 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-2 left-2 text-white text-sm font-semibold">
+                {language === 'en' ? 'Equipment' : 'Équipement'}
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              className="relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                src="https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Team collaboration"
+                className="w-full h-32 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-2 left-2 text-white text-sm font-semibold">
+                {language === 'en' ? 'Team' : 'Équipe'}
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: -1 }}
+              className="relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Safety standards"
+                className="w-full h-32 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-2 left-2 text-white text-sm font-semibold">
+                {language === 'en' ? 'Safety' : 'Sécurité'}
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

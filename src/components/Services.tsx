@@ -163,6 +163,20 @@ const Services: React.FC<ServicesProps> = ({ language }) => {
 
           {/* Features */}
           <motion.div variants={itemVariants} className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-3xl">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-10 -right-10 w-32 h-32 border-4 border-amber-200/30 rounded-full"
+              />
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute -bottom-10 -left-10 w-24 h-24 border-4 border-orange-200/30 rounded-full"
+              />
+            </div>
+            
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
               {content[language].features.title}
             </h3>

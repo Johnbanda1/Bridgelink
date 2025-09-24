@@ -178,6 +178,77 @@ const Projects: React.FC<ProjectsProps> = ({ language }) => {
 
           {/* Statistics */}
           <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+            {/* Mineral Showcase */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              <motion.div 
+                whileHover={{ scale: 1.1, rotateY: 10 }}
+                className="relative group"
+              >
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-amber-200 group-hover:border-amber-400 transition-colors">
+                  <img
+                    src="https://images.pexels.com/photos/844923/pexels-photo-844923.jpeg?auto=compress&cs=tinysrgb&w=200"
+                    alt="Gold"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-center mt-3">
+                  <h4 className="font-bold text-gray-900">{language === 'en' ? 'Gold' : 'Or'}</h4>
+                  <p className="text-sm text-gray-600">Au</p>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ scale: 1.1, rotateY: 10 }}
+                className="relative group"
+              >
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-orange-200 group-hover:border-orange-400 transition-colors">
+                  <img
+                    src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=200"
+                    alt="Copper"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-center mt-3">
+                  <h4 className="font-bold text-gray-900">{language === 'en' ? 'Copper' : 'Cuivre'}</h4>
+                  <p className="text-sm text-gray-600">Cu</p>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ scale: 1.1, rotateY: 10 }}
+                className="relative group"
+              >
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-blue-200 group-hover:border-blue-400 transition-colors">
+                  <img
+                    src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=200"
+                    alt="Cobalt"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-center mt-3">
+                  <h4 className="font-bold text-gray-900">Cobalt</h4>
+                  <p className="text-sm text-gray-600">Co</p>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ scale: 1.1, rotateY: 10 }}
+                className="relative group"
+              >
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-gray-200 group-hover:border-gray-400 transition-colors">
+                  <img
+                    src="https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&cs=tinysrgb&w=200"
+                    alt="Coltan"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-center mt-3">
+                  <h4 className="font-bold text-gray-900">Coltan</h4>
+                  <p className="text-sm text-gray-600">Ta</p>
+                </div>
+              </motion.div>
+            </div>
+            
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
               {content[language].statistics.title}
             </h3>

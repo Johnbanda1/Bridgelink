@@ -124,6 +124,29 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
 
       {/* Floating elements */}
       <div className="absolute inset-0 z-10">
+        {/* Animated particles */}
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            animate={{
+              x: [0, Math.random() * 100 - 50],
+              y: [0, Math.random() * 100 - 50],
+              opacity: [0.3, 0.8, 0.3],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{
+              duration: 3 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 2
+            }}
+            className="absolute w-2 h-2 bg-amber-400/40 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
+            }}
+          />
+        ))}
+        
         <motion.div
           animate={{ 
             x: [0, 30, 0], 
@@ -131,7 +154,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             rotate: [0, 5, 0]
           }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-4 h-4 bg-amber-400/30 rounded-full"
+          className="absolute top-20 left-10 w-6 h-6 bg-amber-400/40 rounded-full shadow-lg"
         />
         <motion.div
           animate={{ 
@@ -140,7 +163,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             rotate: [0, -3, 0]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute top-40 right-20 w-6 h-6 bg-orange-400/20 rounded-full"
+          className="absolute top-40 right-20 w-8 h-8 bg-orange-400/30 rounded-full shadow-lg"
         />
         <motion.div
           animate={{ 
@@ -149,7 +172,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             rotate: [0, 8, 0]
           }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-40 left-20 w-8 h-8 bg-yellow-400/25 rounded-full"
+          className="absolute bottom-40 left-20 w-10 h-10 bg-yellow-400/35 rounded-full shadow-lg"
         />
       </div>
     </section>
